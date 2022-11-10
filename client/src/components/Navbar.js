@@ -8,7 +8,7 @@ function Navbar() {
     window.location.href='/login'
   }
 
-  const [rewards, setRewards] = useState([]);
+  const [location, setlocation] = useState([]);
     
     useEffect(() => {
       async function fetchData() {
@@ -16,8 +16,8 @@ function Navbar() {
         console.log(retrievedData.email)
         const req = await axios.post('/api/users/rewards',{email:retrievedData.email});
         var reqdata = req.data;
-        console.log(reqdata[0].rewards);
-        setRewards(reqdata[0].rewards);
+        console.log(reqdata[0].location);
+        setlocation(reqdata[0].location);
        
       }
 
@@ -60,8 +60,8 @@ function Navbar() {
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a className="dropdown-item" href="/profile">Profile</a>
-              <a className="dropdown-item" href="/profile">Rewards: &nbsp; {rewards}</a>
               <a className="dropdown-item" href="#" onClick={logout}>Logout</a>
+              <a className="dropdown-item" href="#" onClick={location}>Farm Location</a>
             </div>
           </div>
 
@@ -77,11 +77,7 @@ function Navbar() {
                 Login
               </a>
             </li>
-            <li className="nav-item active">
-              <a className="nav-link" href="/map">
-                Farm-MAP
-              </a>
-            </li>
+            
             </>
             )}
            

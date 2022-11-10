@@ -336,7 +336,6 @@ function Bookingscreen({ match }) {
                         <div class="form-check form-check-inline">
                             <input type="checkbox" id="rewards" onChange={handleChange} name="rewards"
                                    align="left"/>
-                            <label for="rewards">Use Rewards (Max:100)</label>
                         </div>
 
                         <br></br>
@@ -348,11 +347,10 @@ function Bookingscreen({ match }) {
 
                         <br></br>
                         <div className='mt-5'>
-                            <p>Total rewards: &nbsp; {rewards}</p>
                             <h1><b>Amount</b></h1>
                             <hr/>
                             
-                            <p>Rent Per Day : <b>{room.rentperday}</b></p>
+                            <p> Drone Rent Per Day : <b>{room.rentperday}</b></p>
                             <h1><b>Total Amount : {totalAmount} /-</b></h1>
 
                             <StripeCheckout

@@ -228,7 +228,7 @@ function Homescreen() {
                 <option value="all">Select Drone type</option>
                 <option value="suite">DJI MATRICE 200</option>
                 <option value="classic">DJI PANTOM</option>
-                <option value="classic">Classic</option>
+                <option value="classic">Phoenix 6 </option>
 
               </select>
             </div>

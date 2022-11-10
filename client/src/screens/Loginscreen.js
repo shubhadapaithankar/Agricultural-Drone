@@ -44,24 +44,7 @@ export default function Loginscreen() {
 
     return (
 
-      <><form method="POST"  action="https://forms.gle/GgxvfoQqWwaQmu1E8"
-      >
-        <input 
-    class="input" 
-    type="text"
-    name="entry.748645480"
-    placeholder="Name"
-  />
-  <input 
-    class="input" 
-    type="email"
-    name="entry.919588971" 
-    placeholder="Email" 
-  />
-  <button class="button" type="submit" >
-    Submit
-  </button>
-</form>
+      <>
       
       <div className='login'>
           <div className="row justify-content-center mt-5">

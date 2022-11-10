@@ -144,27 +144,11 @@ function Bookingscreen({ match }) {
             var totalAmount = data.rentperday * totalDays;
             var totalAmountBefore = totalAmount;
 
-            if (isSummerPricingApplied) {
-                var summerAdditionalCharges = totalAmountBefore * 0.02;
-                setSummerAdditionalCharges(summerAdditionalCharges);
-                setSummerPricingMessage("* Additonal Price (0.02%) may be applied for the summer.")
-                totalAmount = totalAmount + summerAdditionalCharges;
-            }
-
-            if (isChristmasPricingApplied) {
-                var christmasAdditionalCharges = totalAmountBefore * 0.05;
-                setChristmasAdditionalCharges(christmasAdditionalCharges);
-                setChristmasPricingMessage("* Additional Price (0.05%) may be applied for the Christmas.")
-                totalAmount = totalAmount + christmasAdditionalCharges;
-            }
+           
+           
 
 
-            if (isWeekendIdentified) {
-                var weekendAdditonalCharges = totalAmountBefore * 0.15;
-                setWeekendAdditionalCharges(weekendAdditonalCharges);
-                setSurgePricingMessage("* You have a weekend in the above date range. An extra charge of (0.15%) will be applied for the weekend.")
-                totalAmount = totalAmount + weekendAdditonalCharges;
-            }
+           
 
             settotalAmount(totalAmount)
 
@@ -344,13 +328,9 @@ function Bookingscreen({ match }) {
                             <hr/>
 
                             <p><b>Name</b> : {JSON.parse(localStorage.getItem('currentUser')).name}</p>
-                            <p><b>Check-in</b> : {match.params.fromdate}</p>
-                            <p><b>Check-out</b> : {match.params.todate}</p>
-                            <p><b>Number of guests allowed</b>: {room.maxcount}</p>
-                            <p><b>Surge Pricing Applied</b>: {isWeekendPresent ? "True" : "False"}</p>
-                            <p><b>Summer Pricing Applied</b>: {isSummerPricingApplied ? "True" : "False"}</p>
-                            <p><b>Christmas Pricing Applied</b>: {isChristmasPricingApplied ? "True" : "False"}</p>
-
+                            <p><b>Service-Start</b> : {match.params.fromdate}</p>
+                            <p><b>Service-end</b> : {match.params.todate}</p>
+                           
                             <p className='alert'><b>{surgePricingMessage}</b></p>
                             <p className='alert'><b>{summerPricingMessage}</b></p>
                             <p className='alert'><b>{christmasPricingMessage}</b></p>
@@ -365,50 +345,17 @@ function Bookingscreen({ match }) {
                         <br></br>
                         <br></br>
                         <br></br>
-                        <div class="form-check form-check-inline">
-
-                            <input class="form-check-input" type="checkbox"
-                                   onChange={handleChangeDailyContinentalBreakfast} id="dailyContinentalBreakfast"
-                                   value="option1"/>
-                            <label class="form-check-label" for="inlineCheckbox1">Daily Continental Breakfast
-                                (10$)</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox"
-                                   onChange={handleChangeAccessToFitnessRoom} id="accessToFitnessRoom"
-                                   value="option2"/>
-                            <label class="form-check-label" for="inlineCheckbox2">Fitness Room (15$)</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox"
-                                   onChange={handleChangeToSwimmingPoolOrJacuzzi} id="accessToSwimmingPoolJacuzzi"
-                                   value="option3"/>
-                            <label class="form-check-label" for="inlineCheckbox3">Swimming Pool/Jacuzzi
-                                (18$)</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" onChange={handleChangeToDailyParking}
-                                   id="accessToDailyParking" value="option3"/>
-                            <label class="form-check-label" for="inlineCheckbox3">Daily Parking (20$)</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox"
-                                   onChange={handleChangetoAllMealsIncluded} id="accessToAllMealsIncluded"
-                                   value="option3"/>
-                            <label class="form-check-label" for="inlineCheckbox3">All Meals Included (25$)</label>
-                        </div>
+                        
+                        
+                      
 
                         <br></br>
                         <div className='mt-5'>
                             <p>Total rewards: &nbsp; {rewards}</p>
                             <h1><b>Amount</b></h1>
                             <hr/>
-                            <p>Total Days : <b>{totalDays}</b></p>
+                            
                             <p>Rent Per Day : <b>{room.rentperday}</b></p>
-                            <p>Total Amount (Before additional charges): <b>{totalDays * room.rentperday}</b></p>
-                            <p>Weekend Pricing (if applicable): <b>{weekendAdditonalCharges}</b></p>
-                            <p>Summer Pricing (if applicable): <b>{summerAdditionalCharges}</b></p>
-                            <p>Christmas Pricing (if applicable): <b>{christmasAdditionalCharges}</b></p>
                             <h1><b>Total Amount : {totalAmount} /-</b></h1>
 
                             <StripeCheckout

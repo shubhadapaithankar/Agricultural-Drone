@@ -4,6 +4,8 @@ import axios from "axios";
 import './screen.css';
 import Error from "../components/Error";
 import Loader from "../components/Loader";
+import { Button } from "react-bootstrap";
+import { Checkbox } from "antd";
 import Success from '../components/Success'
 export default function Registerscreen() {
   const [name, setname] = useState("");
@@ -59,7 +61,7 @@ export default function Registerscreen() {
           </h2>
           <div>
             <input required type="text" placeholder="name" className="form-control mt-1" value={name} onChange={(e)=>{setname(e.target.value)}} />
-            <input required type="text" placeholder="Address" className="form-control mt-1" value={name} onChange={(e)=>{setname(e.target.value)}} />
+            <input required type="text" placeholder="Adress" className="form-control mt-1" value={name} onChange={(e)=>{setname(e.target.value)}} />
             <input required type="text" placeholder="GovermentID" className="form-control mt-1" value={name} onChange={(e)=>{setname(e.target.value)}} />
             <input required type="text" placeholder="email" className="form-control mt-1" value={email} onChange={(e)=>{setemail(e.target.value)}} />
             <input
@@ -85,6 +87,11 @@ export default function Registerscreen() {
             <button onClick={register} className="btn btn-primary rounded-pill mt-3 mb-3">REGISTER</button>
             <br/>
             <a style={{color:'black'}} href="/login">Click Here To Login</a>
+            <a style={{ color: 'black' }} href="https://react.school" className="d-flex justify-content-center" target="_blank"><Button> Farmer profile</Button>&nbsp; &nbsp;<Checkbox label="Save form inputs to storage?" /></a> 
+                &ensp;
+
+            <a style={{ color: 'black' }} href="https://react.school" className="d-flex justify-content-center" target="_blank"><Button> Pilot profile</Button>&nbsp; &nbsp;<Checkbox label="Save form inputs to storage?" /></a>
+                
           </div>
         </div>
       </div>

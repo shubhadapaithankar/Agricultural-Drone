@@ -78,11 +78,7 @@ export default function Loginscreen() {
                 &nbsp;
                 <br />
                 &ensp;
-                <a style={{ color: 'black' }} href="https://react.school" className="d-flex justify-content-center" target="_blank"><Button> Farmer profile</Button>&nbsp; &nbsp;<Checkbox label="Save form inputs to storage?" /></a> 
-                &ensp;
-
-                <a style={{ color: 'black' }} href="https://react.school" className="d-flex justify-content-center" target="_blank"><Button> Pilot profile</Button>&nbsp; &nbsp;<Checkbox label="Save form inputs to storage?" /></a>
-                
+               
                 
             </div>
             </div>

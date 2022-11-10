@@ -77,6 +77,11 @@ function Navbar() {
                 Login
               </a>
             </li>
+            <li className="nav-item active">
+              <a className="nav-link" href="/map">
+                Farm-MAP
+              </a>
+            </li>
             </>
             )}
            

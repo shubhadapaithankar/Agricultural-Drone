@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
+
 import {useDispatch , useSelector} from 'react-redux'
 import axios from "axios";
 import Error from "../components/Error";
 import Loader from "../components/Loader";
 import Success from "../components/Success";
 import Swal from 'sweetalert2'
+import { Button } from "react-bootstrap";
+import { Checkbox } from "antd";
+
+
 export default function Loginscreen() {
   
 
@@ -66,14 +71,28 @@ export default function Loginscreen() {
                   required
                   onChange={(e) => { setpassword(e.target.value); } } />
 
-                <button onClick={login} className="btn btn-success mt-3 mb-3 rounded-pill">LOGIN</button>
+                <div class="row justify-content-center">
+                <button onClick={login} className="btn btn-success mt-3 mb-3 rounded-pill ">LOGIN</button>
+                </div>
+                <a style={{ color: 'black' }} href="/register" className="mt-2">Click Here To Register</a> &nbsp;
+                &nbsp;
                 <br />
-                <a style={{ color: 'black' }} href="/register" className="mt-2">Click Here To Register</a>
-              </div>
+                &ensp;
+                <a style={{ color: 'black' }} href="https://react.school" className="d-flex justify-content-center" target="_blank"><Button> Farmer profile</Button>&nbsp; &nbsp;<Checkbox label="Save form inputs to storage?" /></a> 
+                &ensp;
+
+                <a style={{ color: 'black' }} href="https://react.school" className="d-flex justify-content-center" target="_blank"><Button> Pilot profile</Button>&nbsp; &nbsp;<Checkbox label="Save form inputs to storage?" /></a>
+                
+                
             </div>
-          </div>
+            </div>
+          </div> 
         </div></>
 
-        
+    
     )
 }
+
+
+     
+    

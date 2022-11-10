@@ -331,9 +331,6 @@ function Bookingscreen({ match }) {
                             <p><b>Service-Start</b> : {match.params.fromdate}</p>
                             <p><b>Service-end</b> : {match.params.todate}</p>
                            
-                            <p className='alert'><b>{surgePricingMessage}</b></p>
-                            <p className='alert'><b>{summerPricingMessage}</b></p>
-                            <p className='alert'><b>{christmasPricingMessage}</b></p>
 
                         </div>
                         <div class="form-check form-check-inline">

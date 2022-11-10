@@ -11,6 +11,8 @@ export default function Registerscreen() {
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
+  const[address,setaddress] = useState("");
+  const[govermentID,setid] = useState("");
   const [cpassword, setcpassword] = useState("");
   const[loading, setloading]=useState(false)
   const[error, seterror]=useState(false)
@@ -35,6 +37,8 @@ export default function Registerscreen() {
             setsuccess(true)
             setemail('')
             setname('')
+            setaddress('')
+            setid('')
             setcpassword('')
             setpassword('')
           } catch (error) {
@@ -61,8 +65,8 @@ export default function Registerscreen() {
           </h2>
           <div>
             <input required type="text" placeholder="name" className="form-control mt-1" value={name} onChange={(e)=>{setname(e.target.value)}} />
-            <input required type="text" placeholder="Adress" className="form-control mt-1" value={name} onChange={(e)=>{setname(e.target.value)}} />
-            <input required type="text" placeholder="GovermentID" className="form-control mt-1" value={name} onChange={(e)=>{setname(e.target.value)}} />
+            <input required type="text" placeholder="Adress" className="form-control mt-1" value={address} onChange={(e)=>{setaddress(e.target.value)}} />
+            <input required type="text" placeholder="GovermentID" className="form-control mt-1" value={govermentID} onChange={(e)=>{setid(e.target.value)}} />
             <input required type="text" placeholder="email" className="form-control mt-1" value={email} onChange={(e)=>{setemail(e.target.value)}} />
             <input
               type="password"

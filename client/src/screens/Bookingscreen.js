@@ -212,7 +212,7 @@ function Bookingscreen({ match }) {
             const result = await axios.post('/api/bookings/bookroom', bookingDetails)
             updateData();
             setloading(false)
-            Swal.fire('Congrats', 'Your Room has booked successfully', 'success').then(result => {
+            Swal.fire('Congrats', 'Your Drone has booked successfully', 'success').then(result => {
 
 
                 window.location.href = '/profile'

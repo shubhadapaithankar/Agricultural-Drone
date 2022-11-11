@@ -14,21 +14,21 @@ const user = JSON.parse(localStorage.getItem("currentUser"));
 function Adminscreen() {
   return (
     <div className="ml-3">
-        <h2 className="text-center m-2" style={{ fontSize: "35px" }}>Admin Panel</h2>
+        <h2 className="text-center m-2" style={{ fontSize: "35px" }}>Drone Admin Panel</h2>
       <Tabs defaultActiveKey="1">
         <TabPane tab="Bookings" key="1">
           <div className="row">
             <Bookings/>
           </div>
         </TabPane>
-        <TabPane tab="Rooms" key="2">
+        <TabPane tab="Type of Drone" key="2">
         
             <div className="row">
                <Rooms/>
             </div>
          
         </TabPane>
-        <TabPane tab="Add Room" key="3">
+        <TabPane tab="Add Drone" key="3">
          
             
                  <Addroom/>
@@ -75,7 +75,7 @@ export function Bookings() {
                            <tr>
                                <th>Booking Id</th>
                                <th>Userid</th>
-                               <th>Room</th>
+                               <th>Drone</th>
                                <th>From</th>
                                <th>To</th>
                                <th>Status</th>
@@ -127,9 +127,9 @@ export function Rooms() {
                    <table className='table table-bordered table-dark'>
                        <thead className='bs'>
                            <tr>
-                               <th>Room Id</th>
+                               <th>Drone Id</th>
                                <th>Name</th>
-                               <th>Type</th>
+                               <th>Type of Drone</th>
                                
                            </tr>
                        </thead>
@@ -232,7 +232,7 @@ export function Addroom() {
           <input
             type="text"
             className="form-control mt-1"
-            placeholder="name"
+            placeholder="Drone Name"
             value={room}
             onChange={(e) => {
               setroom(e.target.value);
@@ -242,7 +242,7 @@ export function Addroom() {
           <input
             type="text"
             className="form-control mt-1"
-            placeholder="rentperday"
+            placeholder="Rentperday"
             value={rentperday}
             onChange={(e) => {
               setrentperday(e.target.value);
@@ -269,7 +269,7 @@ export function Addroom() {
         <input
             type="text"
             className="form-control mt-1"
-            placeholder="type"
+            placeholder="Type of the Drone"
             value={type}
             onChange={(e) => {
               settype(e.target.value);
@@ -303,7 +303,7 @@ export function Addroom() {
             }}
           />
           <div className='mt-1 text-right'>
-          <button className="btn btn-primary" onClick={addRoom}>ADD ROOM</button>
+          <button className="btn btn-primary" onClick={addRoom}>ADD DRONE</button>
           </div>
         </div>
      

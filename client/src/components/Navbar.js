@@ -64,6 +64,9 @@ function Navbar() {
               <a className="dropdown-item" href="#" onClick={location}>Farm Location</a>
             </div>
           </div>
+          
+
+
 
           ) : (
             <>

@@ -72,15 +72,7 @@ import React from "react"
             </a>
         </div>
         <p className="txt-119">Welcome! Let’s finish your registration.</p>
-        <p className="txt-368">Select Role to Register As</p>
-        <div className="header flex-row-vstart-hstart clip-contents">
-            <p className="txt-277">Home Contact Profile</p>
-            <img
-            src="https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/0ppb7yxkqy8-1804%3A2161?alt=media&token=6658e055-369c-4c10-90ef-8f397b008dac"
-            alt="Not Found"
-            className="search"
-            />
-        </div>
+       
         </div>
     )
     }

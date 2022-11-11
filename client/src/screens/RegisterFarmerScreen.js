@@ -53,12 +53,7 @@ export default function RegisterFarmerScreen() {
     <div className="farmer-register-1 flex-col-hstart-vstart clip-contents">
       <p className="txt-111">Select Role to Register As</p>
       <div className="header flex-row-vstart-hstart clip-contents">
-        <p className="txt-544">Home Contact Profile</p>
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/72o21d8j7zs-1415%3A1907?alt=media&token=ecbb4d40-fdf0-4f29-a690-3430f3e85ab5"
-          alt="Not Found"
-          className="search"
-        />
+       
       </div> 
       
 

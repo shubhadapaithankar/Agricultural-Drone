@@ -6,9 +6,12 @@ const path = require('path')
 const roomsRoutes = require('./routes/roomsRoute')
 const userRoute = require('./routes/userRoute')
 const bookingsRoute = require('./routes/bookingRoute')
+const farmerRoute = require('./routes/farmerRoute')
 app.use('/api/rooms', roomsRoutes)
 app.use('/api/users', userRoute)
 app.use('/api/bookings', bookingsRoute)
+app.use('/api/farmers',farmerRoute)
+
 
 // The backend is inspired from udemy course by shreyrooms. 
 if (process.env.NODE_ENV === 'production') {

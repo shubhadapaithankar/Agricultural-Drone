@@ -15,6 +15,7 @@ import SelectionScreen from "./screens/SelectionScreen";
 import RegisterFarmerScreen from "./screens/RegisterFarmerScreen";
 
 import './App.css'
+import RegisterPilotScreen from "./screens/RegisterPilotScreen";
 // import hotelimage from "./images/back.png";
     
 function App() {
@@ -49,6 +50,8 @@ function App() {
          <Route path="/admin" component={Adminscreen}/>
          <Route path="/registerfarmer" component={RegisterFarmerScreen}/>
          <Route path="/selectionscreen" component={SelectionScreen}/>
+         <Route path="/registerpilot" component={RegisterPilotScreen}/>
+
       </BrowserRouter>
     </div>
     // </div>

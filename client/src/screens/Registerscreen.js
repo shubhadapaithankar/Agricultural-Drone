@@ -92,6 +92,7 @@ export default function Registerscreen() {
             <br/>
             <a style={{color:'black'}} href="/login">Click Here To Login</a>
             <a style={{ color: 'black' }} href="https://react.school" className="d-flex justify-content-center" target="_blank"><Button> Farmer profile</Button>&nbsp; &nbsp;<Checkbox label="Save form inputs to storage?" /></a> 
+                
                 &ensp;
 
             <a style={{ color: 'black' }} href="https://react.school" className="d-flex justify-content-center" target="_blank"><Button> Pilot profile</Button>&nbsp; &nbsp;<Checkbox label="Save form inputs to storage?" /></a>

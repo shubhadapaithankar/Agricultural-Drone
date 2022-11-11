@@ -11,6 +11,7 @@ import Profilescreen from "./screens/Profilescreen";
 import Helpscreen from "./screens/Helpscreen";
 import Landingscreen from "./screens/Landingscreen";
 import Adminscreen from "./screens/Adminscreen";
+import SelectionScreen from "./screens/SelectionScreen";
 import './App.css'
 // import hotelimage from "./images/back.png";
     
@@ -44,6 +45,7 @@ function App() {
          <Route path="/profile" component={Profilescreen}/>
          <Route path="/HelpScreen" component={Helpscreen}/>
          <Route path="/admin" component={Adminscreen}/>
+         <Route path="/selectionscreen" component={SelectionScreen}/>
       </BrowserRouter>
     </div>
     // </div>

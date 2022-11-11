@@ -6,6 +6,7 @@ import Error from "../components/Error";
 import Loader from "../components/Loader";
 import { Button } from "react-bootstrap";
 import { Checkbox } from "antd";
+import {Routes, Route, useHistory} from "react-router-dom";
 import Success from '../components/Success'
 export default function Registerscreen() {
   const [name, setname] = useState("");
@@ -17,8 +18,16 @@ export default function Registerscreen() {
   const[loading, setloading]=useState(false)
   const[error, seterror]=useState(false)
   const[success, setsuccess]=useState(false) 
-  async function register(){
+  const navigate = useHistory();
 
+  const navigateToHome = () => {
+      // 👇️ navigate to /contacts
+      register();
+      navigate.push('/SelectionScreen');
+  };
+
+  async function register(){
+  
       if(password!=cpassword)
       {
           alert("passwords not matched")
@@ -90,13 +99,10 @@ export default function Registerscreen() {
 </div> */}
             <button onClick={register} className="btn btn-primary rounded-pill mt-3 mb-3">REGISTER</button>
             <br/>
-            <a style={{color:'black'}} href="/login">Click Here To Login</a>
-            <a style={{ color: 'black' }} href="https://react.school" className="d-flex justify-content-center" target="_blank"><Button> Farmer profile</Button>&nbsp; &nbsp;<Checkbox label="Save form inputs to storage?" /></a> 
-                
-                &ensp;
+            <a style={{color:'black'}} href="/login">Click Here To Login</a>  &ensp;  &ensp;
 
-            <a style={{ color: 'black' }} href="https://react.school" className="d-flex justify-content-center" target="_blank"><Button> Pilot profile</Button>&nbsp; &nbsp;<Checkbox label="Save form inputs to storage?" /></a>
-                
+            <button onClick={navigateToHome} className="btn btn-primary rounded-pill mt-3 mb-3">Select User Profile</button>
+            
           </div>
         </div>
       </div>

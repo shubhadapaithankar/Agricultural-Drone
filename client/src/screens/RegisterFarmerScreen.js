@@ -59,17 +59,27 @@ export default function RegisterFarmerScreen() {
           alt="Not Found"
           className="search"
         />
-      </div>
+      </div> 
+      
+
+
       <div className="group-844 flex-col-hend">
         <div className="contents-1 flex-col-hstart-vstart">
           <div className="step-3 flex-col-hstart-vstart">
-            <div className="title flex-col-hstart-vstart">
+            <div className="title flex-col-hstart-vstart"> ;
+            
+
+            <div className="button-sign-up1 flex-row-vcenter-hcenter">
+            <div class="container text-center">
               <p className="txt-984">
-                Fill in the data for your profile. It will only take a couple of
-                minutes.
-              </p>
-              <p className="txt-277">Farmer Information</p>
-            </div>
+              
+              </p> 
+              </div>
+              </div> 
+              
+              <p className="txt-277" flex-row-vcenter-hcenter> Update Farmer Information</p>
+            </div> &ensp; &ensp;
+
             <div className="space flex-col-hstart-vstart">
               <div className="field flex-col-hstart-vstart">
               
@@ -126,9 +136,7 @@ export default function RegisterFarmerScreen() {
                 </div>
               </div>
             </div>
-            <div className="button-sign-up flex-row-vcenter-hcenter">
-              <p className="txt-574">Back</p>
-            </div>
+            
           </div>
           {/* <div className="progress-bar flex-row-vcenter-hstart">
             <div className="active-indicator" />
@@ -141,6 +149,11 @@ export default function RegisterFarmerScreen() {
             <div className="default-indicator-1" />
           </div> */}
         </div>
+        <div className="button-sign-up1 flex-row-vcenter-hcenter">
+            <p className="txt-574">
+            <button onClick={saveFarmerDetails} className="button-sign-up1 flex-row-vcenter-hcenter"> BACK </button></p>
+          </div>
+          &ensp;  &ensp;
           <div className="button-sign-up1 flex-row-vcenter-hcenter">
             <p className="txt-574">
             <button onClick={saveFarmerDetails} className="button-sign-up1 flex-row-vcenter-hcenter"> REGISTER</button></p>

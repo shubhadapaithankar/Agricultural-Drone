@@ -7,6 +7,7 @@ import Success from '../components/Success'
 import axios from "axios";
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
+import {Routes, Route, useHistory} from "react-router-dom";
 
 export default function RegisterPilotScreen() {
   const [name, setname] = useState("");
@@ -17,7 +18,19 @@ export default function RegisterPilotScreen() {
   const[loading, setloading]=useState(false)
   const[error, seterror]=useState(false)
   const[success, setsuccess]=useState(false) 
-  
+  const navigate = useHistory();
+
+
+  const navigateToSelectionScreen = () => {
+    // 👇️ navigate to /contacts
+    navigate.push('/SelectionScreen');
+};
+
+const navigateToHomeScreen = () => {
+    // 👇️ navigate to /contacts
+    navigate.push('/');
+};
+
    async function saveFarmerDetails(){
   
     console.log("hello");
@@ -43,22 +56,19 @@ export default function RegisterPilotScreen() {
     setPhoneNumber('')
     setbirthday('')
     setgender('')
+    navigateToHomeScreen();
   } catch (error) {
     seterror(true)
     setloading(false)
     console.log(error);
   }
+  
   }
   return (
     <div className="farmer-register-1 flex-col-hstart-vstart clip-contents">
       <p className="txt-111">Select Role to Register As</p>
       <div className="header flex-row-vstart-hstart clip-contents">
-        <p className="txt-544">Home Contact Profile</p>
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/72o21d8j7zs-1415%3A1907?alt=media&token=ecbb4d40-fdf0-4f29-a690-3430f3e85ab5"
-          alt="Not Found"
-          className="search"
-        />
+        
       </div>
       <div className="group-844 flex-col-hend">
         <div className="contents-1 flex-col-hstart-vstart">
@@ -68,7 +78,7 @@ export default function RegisterPilotScreen() {
                 Fill in the data for your profile. It will only take a couple of
                 minutes.
               </p>
-              <p className="txt-277">Pilot Information</p>
+              <p className="txt-277">Update Pilot Information</p>
             </div>
             <div className="space flex-col-hstart-vstart">
               <div className="field flex-col-hstart-vstart">
@@ -126,9 +136,7 @@ export default function RegisterPilotScreen() {
                 </div>
               </div>
             </div>
-            <div className="button-sign-up flex-row-vcenter-hcenter">
-              <p className="txt-574">Back</p>
-            </div>
+            
           </div>
           {/* <div className="progress-bar flex-row-vcenter-hstart">
             <div className="active-indicator" />
@@ -141,6 +149,11 @@ export default function RegisterPilotScreen() {
             <div className="default-indicator-1" />
           </div> */}
         </div>
+        <div className="button-sign-up1 flex-row-vcenter-hcenter">
+            <p className="txt-574">
+            <button onClick={navigateToSelectionScreen} className="button-sign-up1 flex-row-vcenter-hcenter"> BACK </button></p>
+          </div>
+          &ensp;  &ensp;
           <div className="button-sign-up1 flex-row-vcenter-hcenter">
             <p className="txt-574">
             <button onClick={saveFarmerDetails} className="button-sign-up1 flex-row-vcenter-hcenter"> REGISTER</button></p>

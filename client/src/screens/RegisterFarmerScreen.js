@@ -7,6 +7,8 @@ import Success from '../components/Success'
 import axios from "axios";
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
+import {Routes, Route, useHistory} from "react-router-dom";
+
 
 export default function RegisterFarmerScreen() {
   const [name, setname] = useState("");
@@ -17,7 +19,17 @@ export default function RegisterFarmerScreen() {
   const[loading, setloading]=useState(false)
   const[error, seterror]=useState(false)
   const[success, setsuccess]=useState(false) 
-  
+  const navigate = useHistory();
+
+  const navigateToSelectionScreen = () => {
+    // 👇️ navigate to /contacts
+    navigate.push('/SelectionScreen');
+};
+
+const navigateToHomeScreen = () => {
+    // 👇️ navigate to /contacts
+    navigate.push('/');
+};
    async function saveFarmerDetails(){
   
     console.log("hello");
@@ -43,11 +55,13 @@ export default function RegisterFarmerScreen() {
     setPhoneNumber('')
     setbirthday('')
     setgender('')
+    navigateToHomeScreen();
   } catch (error) {
     seterror(true)
     setloading(false)
     console.log(error);
   }
+
   }
   return (
     <div className="farmer-register-1 flex-col-hstart-vstart clip-contents">
@@ -146,7 +160,7 @@ export default function RegisterFarmerScreen() {
         </div>
         <div className="button-sign-up1 flex-row-vcenter-hcenter">
             <p className="txt-574">
-            <button onClick={saveFarmerDetails} className="button-sign-up1 flex-row-vcenter-hcenter"> BACK </button></p>
+            <button onClick={navigateToSelectionScreen} className="button-sign-up1 flex-row-vcenter-hcenter"> BACK </button></p>
           </div>
           &ensp;  &ensp;
           <div className="button-sign-up1 flex-row-vcenter-hcenter">

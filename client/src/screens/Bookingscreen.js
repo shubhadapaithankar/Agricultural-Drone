@@ -5,7 +5,7 @@ import Error from "../components/Error";
 import Loader from "../components/Loader";
 import Success from '../components/Success'
 import StripeCheckout from 'react-stripe-checkout'
-
+import {Routes, Route, useHistory} from "react-router-dom";
 import moment from "moment"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -31,8 +31,7 @@ function Bookingscreen({ match }) {
     //
     // userLogged(user_logged)
 
-
-
+  
     const [loading, setloading] = useState(true);
     const [error, seterror] = useState(false)
     const [success, setsuccess] = useState(false)
@@ -59,7 +58,13 @@ function Bookingscreen({ match }) {
     const [accessToSwimmingPoolJacuzzi, setAccessToSwimmingPoolJacuzzi] = useState(false);
     const [accessToDailyParking, setAccessToDailyParking] = useState(false);
     const [accessToAllMealsIncluded, setAccessToAllMealsIncluded] = useState(false);
+    const navigate = useHistory();
 
+    const navigateToHome = () => {
+        // 👇️ navigate to /contacts
+        navigate.push('/');
+    }
+    
 
     function isWeekend(date1, date2) {
         var d1 = new Date(date1),
@@ -116,6 +121,9 @@ function Bookingscreen({ match }) {
         }
         return false;
     }
+
+ 
+
 
     useEffect(async () => {
 
@@ -307,6 +315,11 @@ function Bookingscreen({ match }) {
 
     };
 
+    const navigateToHomeScreen = () => {
+    // 👇️ navigate to /contacts
+    navigate.push('/');
+};
+
     return (
         <div className='m-5'>
 
@@ -361,7 +374,8 @@ function Bookingscreen({ match }) {
                                 currency='USD'
                             >
 
-
+                                <button onClick={navigateToHome} className="btn btn-primary">Back</button>
+                                &nbsp;
                                 <button className='btn btn-primary'>Pay Now</button>
 
                             </StripeCheckout>

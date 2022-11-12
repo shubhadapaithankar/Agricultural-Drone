@@ -46,12 +46,19 @@ import React from "react"
         <div className="form-section">
             <div className="divider flex-col-hstart-vstart clip-contents">
             <p className="txt-255">or</p>
+            
+            &ensp;  &ensp;
             </div>
             
-            <div className="button-sign-up  flex-row-vcenter-hcenter">
-            <button onClick={navigateToHome} className="btn btn-primary rounded-pill mt-3 mb-3">Back</button>
+            <td class="text-center align-middle text-center">
+            <div className="button-sign-up  ">
+            <button onClick={navigateToHome} className="btn btn-primary text-center ">Back</button>
             </div>
+            </td>
            
+
+           
+
 
             <p className="txt-112">Select Role to Register As</p>
         <a href="/registerfarmer">

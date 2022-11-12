@@ -209,6 +209,8 @@ export function Addroom() {
   const [room, setroom] = useState("");
   const [rentperday, setrentperday] = useState();
   const [description, setdescription] = useState("");
+  const [phonenumber, setphonenumber] = useState("");
+  const [maxcount, setmaxcount] = useState();
   const [type, settype] = useState("");
   const [image1, setimage1] = useState("");
   const [image2, setimage2] = useState("");
@@ -217,7 +219,7 @@ export function Addroom() {
   {
       const roomobj = {
           room , 
-          rentperday ,description ,type ,image1 ,image2 ,image3
+          rentperday ,description ,type ,image1 ,image2 ,image3 , phonenumber ,maxcount
       }
       try {
           const result = await axios.post('/api/rooms/addroom' , roomobj)
@@ -258,6 +260,24 @@ export function Addroom() {
             value={description}
             onChange={(e) => {
               setdescription(e.target.value);
+            }}
+          />
+          <input
+            type="text"
+            className="form-control mt-1"
+            placeholder="phonenumber"
+            value={phonenumber}
+            onChange={(e) => {
+              setphonenumber(e.target.value);
+            }}
+          />
+          <input
+            type="text"
+            className="form-control mt-1"
+            placeholder="Inventory count"
+            value={maxcount}
+            onChange={(e) => {
+              setmaxcount(e.target.value);
             }}
           />
 

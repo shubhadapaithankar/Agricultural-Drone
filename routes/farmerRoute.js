@@ -54,15 +54,17 @@ router.post("/farmDetails", async(req, res) => {
 
 router.post("/pilotDetails", async(req, res) => {
   
-    const {name,phoneNumber,email,birthday,gender} = req.body
+    const {name,phoneNumber,email,birthday,gender,pilotCertificateId,drivingLicenseNumber} = req.body
     
     console.log(name)
     console.log(phoneNumber)
     console.log(email)
     console.log(birthday)
     console.log(gender)
+    console.log(pilotCertificateId)
+    console.log(drivingLicenseNumber)
 
-    const newUser = new Pilot({name,phoneNumber,email,birthday,gender})
+    const newUser = new Pilot({name,phoneNumber,email,birthday,gender,pilotCertificateId,drivingLicenseNumber})
 
     try {
         newUser.save()

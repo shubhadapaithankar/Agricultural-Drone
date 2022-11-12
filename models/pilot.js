@@ -5,7 +5,9 @@ const pilotSchema = mongoose.Schema({
     phoneNumber : {type: String , require},
     email : {type: String , require},
     birthday : {type: Date , require , default: false},
-    gender: {type: String,require, default:"Male"}
+    gender: {type: String,require, default:"Male"},
+    pilotCertificateId: {type: String,require, default:""},
+    drivingLicenseNumber: {type: String,require, default:""}
 } , {
     timestamps : true
 })

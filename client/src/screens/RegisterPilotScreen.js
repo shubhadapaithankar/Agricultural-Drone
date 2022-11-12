@@ -15,6 +15,8 @@ export default function RegisterPilotScreen() {
   const [email, setemail] = useState("");
   const [birthday, setbirthday] = useState("");
   const[gender, setgender]=useState("");
+  const[pilotCertificateId, setpilotCertificateId]=useState("");
+  const[drivingLicenseNumber, setdrivingLicenseNumber]=useState("");
   const[loading, setloading]=useState(false)
   const[error, seterror]=useState(false)
   const[success, setsuccess]=useState(false) 
@@ -40,7 +42,9 @@ const navigateToHomeScreen = () => {
       phoneNumber,
       email,
       birthday,
-      gender
+      gender,
+      pilotCertificateId,
+      drivingLicenseNumber
      }
   
   try {
@@ -56,6 +60,8 @@ const navigateToHomeScreen = () => {
     setPhoneNumber('')
     setbirthday('')
     setgender('')
+    setpilotCertificateId('')
+    setdrivingLicenseNumber('')
     navigateToHomeScreen();
   } catch (error) {
     seterror(true)
@@ -129,6 +135,18 @@ const navigateToHomeScreen = () => {
       <option value="Male">Male</option>
        <option value="Female">Female</option> 
      </select>    
+
+     <div className="field flex-col-hstart-vstart">
+              
+              <input required type="text" value={pilotCertificateId} placeholder="Pilot Certificate ID" onChange={(e)=>{setpilotCertificateId(e.target.value)}} />
+               <div className="input flex-col-hstart-vstart"></div>
+    </div>
+
+    <div className="field flex-col-hstart-vstart">
+              
+              <input required type="text" value={drivingLicenseNumber} placeholder="Driving License Number" onChange={(e)=>{setdrivingLicenseNumber(e.target.value)}} />
+               <div className="input flex-col-hstart-vstart"></div>
+    </div>
 
    </div>
                   

@@ -62,13 +62,12 @@ const navigateToHomeScreen = () => {
     setloading(false)
     console.log(error);
   }
-  
+
   }
   return (
     <div className="farmer-register-1 flex-col-hstart-vstart clip-contents">
       <p className="txt-111">Select Role to Register As</p>
       <div className="header flex-row-vstart-hstart clip-contents">
-        
       </div>
       <div className="group-844 flex-col-hend">
         <div className="contents-1 flex-col-hstart-vstart">

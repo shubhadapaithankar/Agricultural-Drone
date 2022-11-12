@@ -47,9 +47,12 @@ import React from "react"
             <div className="divider flex-col-hstart-vstart clip-contents">
             <p className="txt-255">or</p>
             </div>
-            <div className="button-sign-up flex-row-vcenter-hcenter">
+            
+            <div className="button-sign-up  flex-row-vcenter-hcenter">
             <button onClick={navigateToHome} className="btn btn-primary rounded-pill mt-3 mb-3">Back</button>
             </div>
+           
+
             <p className="txt-112">Select Role to Register As</p>
         <a href="/registerfarmer">
             <img    
@@ -68,7 +71,7 @@ import React from "react"
             src="https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/0ppb7yxkqy8-1804%3A2155?alt=media&token=1ae276d0-51af-4d2f-b7a6-a39ae2d64c87"
             alt="Not Found"
             className="ellipse-2"
-            />
+            /> 
             </a>
         </div>
         <p className="txt-119">Welcome! Let’s finish your registration.</p>

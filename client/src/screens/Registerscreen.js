@@ -101,7 +101,7 @@ export default function Registerscreen() {
             <br/>
             <a style={{color:'black'}} href="/login">Click Here To Login</a>  &ensp;  &ensp;
 
-            <button onClick={navigateToHome} className="btn btn-primary rounded-pill mt-3 mb-3">Select User Profile</button>
+            
             
           </div>
         </div>

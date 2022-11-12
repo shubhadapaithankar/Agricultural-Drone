@@ -152,6 +152,7 @@ const navigateToHomeScreen = () => {
        <option value="Female">Female</option> 
      </select>    
     
+    
      <div className="field flex-col-hstart-vstart">
               
               <input required type="text" value={farmAddress} placeholder="Farm Address" onChange={(e)=>{setFarmAddress(e.target.value)}} />

@@ -7,18 +7,23 @@ module.exports = router ;
 
 router.post("/farmerDetails", async(req, res) => {
   
-    const {name,phoneNumber,email,birthday,gender} = req.body
+    const {name,phoneNumber,email,birthday,gender,farmAddress,city,country,zipcode} = req.body
 
     console.log(name)
     console.log(phoneNumber)
     console.log(email)
     console.log(birthday)
     console.log(gender)
+    console.log(farmAddress)
+    console.log(city)
+    console.log(country)
+    console.log(zipcode)
 
-    const newUser = new Farmer({name,phoneNumber,email,birthday,gender})
+    const newUser = new Farmer({name,phoneNumber,email,birthday,gender,farmAddress,city,country,zipcode})
 
     try {
         newUser.save()
+        console.log("Saved")
         res.send('Farmer Details saved successfully')
     } catch (error) {
          return res.status(400).json({ message: error });

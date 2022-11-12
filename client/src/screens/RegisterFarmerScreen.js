@@ -16,6 +16,10 @@ export default function RegisterFarmerScreen() {
   const [email, setemail] = useState("");
   const [birthday, setbirthday] = useState("");
   const[gender, setgender]=useState("");
+  const[farmAddress, setFarmAddress]=useState("");
+  const[city, setCity]=useState("");
+  const[country, setCountry]=useState("");
+  const[zipcode, setZipCode]=useState("");
   const[loading, setloading]=useState(false)
   const[error, seterror]=useState(false)
   const[success, setsuccess]=useState(false) 
@@ -39,7 +43,11 @@ const navigateToHomeScreen = () => {
       phoneNumber,
       email,
       birthday,
-      gender
+      gender,
+      farmAddress,
+      city,
+      country,
+      zipcode
      }
   
   try {
@@ -55,6 +63,10 @@ const navigateToHomeScreen = () => {
     setPhoneNumber('')
     setbirthday('')
     setgender('')
+    setFarmAddress('')
+    setCity('')
+    setCountry('')
+    setZipCode('')
     navigateToHomeScreen();
   } catch (error) {
     seterror(true)
@@ -139,6 +151,31 @@ const navigateToHomeScreen = () => {
       <option value="Male">Male</option>
        <option value="Female">Female</option> 
      </select>    
+    
+     <div className="field flex-col-hstart-vstart">
+              
+              <input required type="text" value={farmAddress} placeholder="Farm Address" onChange={(e)=>{setFarmAddress(e.target.value)}} />
+               <div className="input flex-col-hstart-vstart"></div>
+    </div>
+
+    <div className="field flex-col-hstart-vstart">
+              
+              <input required type="text" value={city} placeholder="City" onChange={(e)=>{setCity(e.target.value)}} />
+               <div className="input flex-col-hstart-vstart"></div>
+    </div>
+
+    <div className="field flex-col-hstart-vstart">
+              
+              <input required type="text" value={country} placeholder="Country" onChange={(e)=>{setCountry(e.target.value)}} />
+               <div className="input flex-col-hstart-vstart"></div>
+    </div>
+
+    <div className="field flex-col-hstart-vstart">
+              
+              <input required type="text" value={zipcode} placeholder="Zip Code" onChange={(e)=>{setZipCode(e.target.value)}} />
+               <div className="input flex-col-hstart-vstart"></div>
+    </div>
+
 
    </div>
                   

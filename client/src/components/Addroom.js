@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import {useDispatch} from "react-redux";
 
 function Addroom() {
   const [room, setroom] = useState("");
@@ -18,7 +19,9 @@ function Addroom() {
           rentperday, maxcount ,description ,phonenumber ,type ,image1 ,image2 ,image3
       }
       try {
-          const result = await axios.post('/api/rooms/addroom' , roomobj)
+          const result = await axios.post('/api/rooms/addroom' , roomobj).then((response) => {
+            console.log(response);
+          })
       } catch (error) {
           
       }
@@ -74,6 +77,16 @@ function Addroom() {
             value={phonenumber}
             onChange={(e) => {
               setphonenumber(e.target.value);
+            }}
+          />
+
+          <input
+            type="text"
+            className="form-control mt-1"
+            placeholder="Inventory count"
+            value={maxcount}
+            onChange={(e) => {
+              setmaxcount(e.target.value);
             }}
           />
           

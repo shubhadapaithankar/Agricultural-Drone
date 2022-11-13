@@ -11,8 +11,6 @@ const roomSchema = mongoose.Schema({
     },
     currentbookings:[],
     imageurls:[],
-    maxcount:{type:Number , required:true},
-    phonenumber:{type:String, required:true},
     rentperday:{type:Number, required:true},
     type:{type:String, required:true}
 

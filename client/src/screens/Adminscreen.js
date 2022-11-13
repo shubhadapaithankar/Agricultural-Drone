@@ -29,16 +29,10 @@ function Adminscreen() {
          
         </TabPane>
         <TabPane tab="Add Drone" key="3">
-         
-            
                  <Addroom/>
-        
-          
         </TabPane>
-        <TabPane tab="Users" key="4">
-      
+        <TabPane tab="Users" key="4"> 
             <Users/>
-      
         </TabPane>
       </Tabs>
     </div>
@@ -210,7 +204,7 @@ export function Addroom() {
   const [rentperday, setrentperday] = useState();
   const [description, setdescription] = useState("");
   const [phonenumber, setphonenumber] = useState("");
-  const [maxcount, setmaxcount] = useState();
+ // const [maxcount, setmaxcount] = useState();
   const [type, settype] = useState("");
   const [image1, setimage1] = useState("");
   const [image2, setimage2] = useState("");
@@ -219,7 +213,7 @@ export function Addroom() {
   {
       const roomobj = {
           room , 
-          rentperday ,description ,type ,image1 ,image2 ,image3 , phonenumber ,maxcount
+          rentperday ,description ,type ,image1 ,image2 ,image3 , phonenumber
       }
       try {
           const result = await axios.post('/api/rooms/addroom' , roomobj)
@@ -271,15 +265,7 @@ export function Addroom() {
               setphonenumber(e.target.value);
             }}
           />
-          <input
-            type="text"
-            className="form-control mt-1"
-            placeholder="Inventory count"
-            value={maxcount}
-            onChange={(e) => {
-              setmaxcount(e.target.value);
-            }}
-          />
+
 
           
           

@@ -2,6 +2,8 @@ import React from "react"
     import "./SelectionScreen.css"
     import {Routes, Route, useHistory} from "react-router-dom";
 
+    
+
     export default function SelectionScreen() {
 
         const navigate = useHistory();
@@ -50,15 +52,13 @@ import React from "react"
             &ensp;  &ensp;
             </div>
             
-            <td class="text-center align-middle text-center">
-            <div className="button-sign-up  ">
-            <button onClick={navigateToHome} className="btn btn-primary text-center ">Back</button>
+            <div class="text-center">
+                <div className="button-sign-up  ">
+                    <button onClick={navigateToHome} className="btn btn-primary text">Back</button>
+                </div>
             </div>
-            </td>
-           
-
-           
-
+            
+       
 
             <p className="txt-112">Select Role to Register As</p>
         <a href="/registerfarmer">
@@ -81,6 +81,7 @@ import React from "react"
             /> 
             </a>
         </div>
+        
         <p className="txt-119">Welcome! Let’s finish your registration.</p>
        
         </div>

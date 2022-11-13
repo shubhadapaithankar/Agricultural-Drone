@@ -199,3 +199,7 @@ p {
   width: 16px;
   height: 17px;
 }
+
+.navbar button {
+  margin:auto;
+}

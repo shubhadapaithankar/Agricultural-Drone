@@ -155,16 +155,7 @@ const navigateToHomeScreen = () => {
             </div>
             
           </div>
-          {/* <div className="progress-bar flex-row-vcenter-hstart">
-            <div className="active-indicator" />
-            <div className="active-line" />
-            
-            <div className="default-indicator" />
-            <div className="active-line" />
-            <div className="default-indicator" />
-            <div className="active-line" />
-            <div className="default-indicator-1" />
-          </div> */}
+        
         </div>
         <div className="button-sign-up1 flex-row-vcenter-hcenter">
             <p className="txt-574">
